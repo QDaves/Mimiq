@@ -1,0 +1,82 @@
+<Window
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  x:Class="Mimiq.MainWindow"
+  Title="Mimiq"
+  Width="500" Height="220"
+  MinWidth="500" MinHeight="220"
+  MaxWidth="500" MaxHeight="220"
+  Topmost="False"
+  ExtendClientAreaToDecorationsHint="True"
+  ExtendClientAreaChromeHints="PreferSystemChrome"
+  ExtendClientAreaTitleBarHeightHint="32"
+  Background="#0a0a0a"
+>
+  <Grid>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,6,0,0" Spacing="10" ZIndex="999">
+      <TextBlock Text="Mimiq" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"/>
+    </StackPanel>
+
+    <Button x:Name="pinbtn" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" Padding="8,4" Margin="0,4,140,0" ToolTip.Tip="pin window" ZIndex="999" Width="32" Height="26">
+      <Viewbox Width="13" Height="13">
+        <Path x:Name="pinicon" Fill="Gray" Data="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z"/>
+      </Viewbox>
+    </Button>
+
+    <Grid Margin="10,38,10,8">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Border Grid.Row="0" Grid.Column="0" Background="Transparent" Width="90" Height="140">
+        <Grid>
+          <TextBlock x:Name="noavatar" Text="No target" FontSize="10" Foreground="#444" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Image x:Name="avatarimg" IsVisible="False" Stretch="Uniform"/>
+        </Grid>
+      </Border>
+
+      <Grid Grid.Row="0" Grid.Column="1" Margin="8,0,0,0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <CheckBox Grid.Row="0" Grid.Column="0" x:Name="figchk" Content="Figure" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="0" Grid.Column="1" x:Name="signchk" Content="Signs" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="0" Grid.Column="2" x:Name="typechk" Content="Typing" Margin="2" Foreground="#ccc" FontSize="11"/>
+
+        <CheckBox Grid.Row="1" Grid.Column="0" x:Name="mottochk" Content="Motto" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="1" Grid.Column="1" x:Name="effchk" Content="Effect" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="1" Grid.Column="2" x:Name="talkchk" Content="Talk" Margin="2" Foreground="#ccc" FontSize="11"/>
+
+        <CheckBox Grid.Row="2" Grid.Column="0" x:Name="actchk" Content="Actions" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="2" Grid.Column="1" x:Name="sitchk" Content="Sit" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="2" Grid.Column="2" x:Name="shoutchk" Content="Shout" Margin="2" Foreground="#ccc" FontSize="11"/>
+
+        <CheckBox Grid.Row="3" Grid.Column="0" x:Name="dancechk" Content="Dance" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="3" Grid.Column="1" x:Name="followchk" Content="Follow" Margin="2" Foreground="#ccc" FontSize="11"/>
+        <CheckBox Grid.Row="3" Grid.Column="2" x:Name="whisperchk" Content="Whisper" Margin="2" Foreground="#ccc" FontSize="11"/>
+      </Grid>
+
+      <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="mainbtn" Margin="0,8,0,0" Padding="0,8" Content="Start" Background="#2563eb" Foreground="White" FontWeight="SemiBold" FontSize="12" CornerRadius="4" BorderThickness="0" HorizontalAlignment="Stretch">
+        <Button.Styles>
+          <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="#1d4ed8"/>
+          </Style>
+        </Button.Styles>
+      </Button>
+    </Grid>
+  </Grid>
+</Window>
