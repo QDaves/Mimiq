@@ -14,3 +14,5 @@ Avatar mimic/q extension for Habbo using G-Earth.
 
 - .NET 8.0 Runtime
 - G-Earth
+
+<img width="516" height="259" alt="screenshot" src="https://github.com/user-attachments/assets/d7d6070e-f039-4368-b90a-027455693525" />
