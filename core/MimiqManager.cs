@@ -226,6 +226,7 @@ public class MimiqManager : INotifyPropertyChanged
                 intercept.Packet.Read<string>();
                 intercept.Packet.Read<int>();
                 intercept.Packet.Read<bool>();
+                intercept.Packet.Read<int>();
             }
             else if (type == 2)
             {
@@ -290,6 +291,7 @@ public class MimiqManager : INotifyPropertyChanged
             int x = intercept.Packet.Read<int>();
             int y = intercept.Packet.Read<int>();
             intercept.Packet.Read<string>();
+            intercept.Packet.Read<int>();
             intercept.Packet.Read<int>();
             intercept.Packet.Read<int>();
             string actions = intercept.Packet.Read<string>();
